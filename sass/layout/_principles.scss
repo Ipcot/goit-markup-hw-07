@@ -1,0 +1,58 @@
+.principles {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.principles__li-container {
+  flex-basis: 270px;
+  &::before {
+    display: flex;
+    content: "";
+    height: 120px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--background-color-section);
+    margin-bottom: 30px;
+  }
+  & + & {
+    margin-left: 30px;
+  }
+}
+
+.antenna::before {
+  content: "";
+  background-image: url(../images/antenna.svg);
+}
+
+.clock::before {
+  content: "";
+  background-image: url(../images/clock.svg);
+}
+
+.astronaut::before {
+  content: "";
+  background-image: url(../images/astronaut.svg);
+}
+
+.diagram::before {
+  content: "";
+  background-image: url(../images/diagram.svg);
+}
+
+.principles__list {
+  display: flex;
+}
+.principles__title {
+  margin-bottom: 10px;
+
+  @include font(Roboto, 700, 14px, 1.14, 0.03em);
+
+  text-transform: uppercase;
+  color: var(--main-color);
+}
+
+.principles__text {
+  @include font(Roboto, 400, 14px, 1.71, 0.03em);
+
+  color: var(--main-text-color);
+}
